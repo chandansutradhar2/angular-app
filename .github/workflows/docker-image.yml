@@ -18,7 +18,7 @@ jobs:
       run: docker build . --file Dockerfile --tag angular-app:$(date +%s)
 
   push_job:
-    needs: build
+    needs: build_job
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
